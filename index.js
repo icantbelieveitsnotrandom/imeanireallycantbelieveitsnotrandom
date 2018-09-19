@@ -32,4 +32,4 @@ function weighted(randomObj) {
   return randomize(results)
 }
 
-module.exports = randomize;
+module.exports = weighted;
