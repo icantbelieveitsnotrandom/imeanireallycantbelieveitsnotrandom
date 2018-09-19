@@ -9,10 +9,9 @@ function randomize(arr) {
 
 
 function weighted(randomObj) {
-  let total = Object.values(randomObj.weight).reduce((a,b) => a+ b)
   let results = [];
 
-  for(array in randomObj.arrays) {
+  for(let array in randomObj.arrays) {
     for(let i = 0; i < randomObj.weight[array]; i++) {
 
       let randomIndex;
@@ -31,5 +30,4 @@ function weighted(randomObj) {
 
   return randomize(results)
 }
-
 module.exports = weighted;
