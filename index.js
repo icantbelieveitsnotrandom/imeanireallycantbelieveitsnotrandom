@@ -9,27 +9,45 @@ function randomize(arr) {
 
 
 function weighted(randomObj) {
-  let total = Object.values(randomObj.weight).reduce((a,b) => a+ b)
-  let results = [];
 
-  for(array in randomObj.arrays) {
-    for(let i = 0; i < randomObj.weight[array]; i++) {
+  let { array, index, results, arrays, type } = randomObj
 
-      let randomIndex;
-      let randomElement;
+  let output = [];
 
-      do {
-        randomIndex = Math.floor(Math.random()*randomObj.arrays[array].length);
+  switch (type) {
+    case 'multi':
+    for (let array in arrays) {
+        for (let i = 0; i < results[array]; i++) {
+          let randomIndex;
+          let randomElement;
+          do {
+            randomIndex = Math.floor(Math.random() * arrays[array].length);
+            randomElement = arrays[array][randomIndex];
+          } while (output.includes(randomElement))
+          output.push(randomElement);
+        }
+      }
+      return randomize(output)
 
-        randomElement = randomObj.arrays[array][randomIndex];
+    case 'single':
+          for (let slice in index) {
+              let range = (index[slice][1] - index[slice][0])
+        for (let i = 0; i < results[slice]; i++) {
+          let randomIndex;
+          let randomElement;
+          do {
+            randomIndex = ((Math.floor(Math.random() * range)) + index[slice][0]);
+            randomElement = array[randomIndex];
+          } while (output.includes(randomElement))
+          output.push(randomElement);
+        }
+      }
+      return randomize(output)
 
-      } while(results.includes(randomElement))
 
-      results.push(randomElement);
-    }
+    default: return null
   }
 
-  return randomize(results)
 }
 
 module.exports = weighted;
