@@ -1,0 +1,20 @@
+{
+  "name": "imeanireallycantbelieveitsnotrandom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icantbelieveitsnotrandom/imeanireallycantbelieveitsnotrandom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icantbelieveitsnotrandom/imeanireallycantbelieveitsnotrandom/issues"
+  },
+  "homepage": "https://github.com/icantbelieveitsnotrandom/imeanireallycantbelieveitsnotrandom#readme"
+}
