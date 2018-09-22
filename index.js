@@ -1,4 +1,4 @@
-function randomize(arr) {
+function shuffler(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -10,7 +10,8 @@ function randomize(arr) {
 
 function weighted(randomObj) {
 
-  let { array, index, results, arrays, type } = randomObj
+  let { array, index, results, arrays, type, shuffle } = randomObj
+  shuffle = (typeof shuffle !== 'undefined') ?  shuffle : true;
 
   let output = [];
 
@@ -30,7 +31,11 @@ function weighted(randomObj) {
           output.push(randomElement);
         }
       }
-      return randomize(output)
+      if(shuffle){
+        return shuffler(output)
+      } else {
+        return output;
+      }
 
     case 'single':
           for (let slice in index) {
@@ -51,7 +56,11 @@ function weighted(randomObj) {
           output.push(randomElement);
         }
       }
-      return randomize(output)
+      if(shuffle){
+        return shuffler(output)
+      } else {
+        return output;
+      }
 
 
     default: return null

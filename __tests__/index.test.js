@@ -86,6 +86,40 @@ const multi = {
     }
   };
 
+const singleNoShuffle = {
+  type: 'single',
+
+  shuffle: false,
+  
+  array: ['a1', 'a2', 'a3', 'a4', 'a5', 'b1', 'b2', 'b3', 'b4', 'b5', 'c1', 'c2', 'c3', 'c4', 'c5'],
+  
+  index: {
+    a: [0, 4],
+    b: [5, 9],
+    c: [5, 14],
+  },
+  results: {
+    a: 1,
+    b: 1,
+    c: 3,
+  }
+  };
+
+const multiNoShuffle = {
+  type: 'multi',
+  shuffle: false,
+  arrays: {
+    a: ['a1', 'a2', 'a3', 'a4', 'a5'],
+    b: ['b1', 'b2', 'b3', 'b4', 'b5'],
+    c: ['c1', 'c2', 'c3', 'c4', 'c5'],
+  },
+  results: {
+    a: 1,
+    b: 2,
+    c: 2,
+  }
+};
+
 describe('weighted() randomizer function', () => {
   it('weighted() single returns undefined when the number of items requested is larger than the slice length', () => {
     expect(weighted(errorDemo1)).toBe(undefined);
@@ -109,6 +143,14 @@ describe('weighted() randomizer function', () => {
 
   it('weighted() returns null when no type is given', () => {
     expect(weighted(errorDemo4)).toBe(null);
+  });
+
+  it('weighted() single returns unshuffled output when shuffle is false', () => {
+    expect(weighted(singleNoShuffle)[0]).toEqual(expect.stringContaining('a'));
+  });
+
+  it('weighted() multi returns unshuffled output when shuffle is false', () => {
+    expect(weighted(multiNoShuffle)[0]).toEqual(expect.stringContaining('a'));
   });
 
 });
