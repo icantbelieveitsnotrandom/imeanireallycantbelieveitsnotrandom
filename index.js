@@ -18,6 +18,9 @@ function weighted(randomObj) {
     case 'multi':
     for (let array in arrays) {
         for (let i = 0; i < results[array]; i++) {
+          if (results[array] > arrays[array].length) {
+            return undefined;
+          }
           let randomIndex;
           let randomElement;
           do {
@@ -31,8 +34,14 @@ function weighted(randomObj) {
 
     case 'single':
           for (let slice in index) {
-              let range = (index[slice][1] - index[slice][0])
+              let range = ((index[slice][1] - index[slice][0]) +1)
+              if (range <1) {
+                return undefined;
+              }
         for (let i = 0; i < results[slice]; i++) {
+          if (results[slice] > range) {
+            return undefined;
+          }
           let randomIndex;
           let randomElement;
           do {
