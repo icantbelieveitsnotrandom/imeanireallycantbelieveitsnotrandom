@@ -1,7 +1,7 @@
 
-#{Autumn's Randomizer}
+# {Autumn's Randomizer}
 
-##Description
+## Description
 
 {Autumn's Randomizer} is a customizable weight randomization function. It allows data input through array(s) and selects a specified number of random items to return a weighted result. It can take single or multiple arrays of items as inputs.
 
@@ -9,11 +9,11 @@
 
 The function also has an {optional} {shuffle} function to rearrange the order of items.
 
-##How To Use
+## How To Use
 
 Install the {Autumn's Randomizer} npm package and import the {randomize} function. Use the instructions below to choose the best option for your data and create the input object.
 
-##How It Works
+## How It Works
 
 The randomizer takes data in two forms - single array and multi-array.
 
@@ -23,7 +23,7 @@ The randomizer takes data in two forms - single array and multi-array.
 
     Example:
     
-``{ type: 'single',
+```{ type: 'single',
 
   array: ['a1', 'a2', 'a3', 'a4', 'a5', 'b1', 'b2', 'b3', 'b4', 'b5', 'c1', 'c2', 'c3', 'c4', 'c5'],
 
@@ -37,7 +37,7 @@ The randomizer takes data in two forms - single array and multi-array.
     b: 1,
     c: 3,
   }
-}``
+}```
 
 This example will choose 1 random item from the a section (index 0-4), 1 random item from the b section (index 5-9) and 3 random items from the b-c sections (index 5-14).
 
@@ -47,7 +47,7 @@ This example will choose 1 random item from the a section (index 0-4), 1 random 
 
     Example:
 
-``{ type: 'multi',
+```{ type: 'multi',
     arrays: {
       a: ['a1', 'a2', 'a3', 'a4', 'a5'],
       b: ['b1', 'b2', 'b3', 'b4', 'b5'],
@@ -58,6 +58,6 @@ This example will choose 1 random item from the a section (index 0-4), 1 random 
       b: 2,
       c: 2,
     }
-}``
+}```
 
     This example will choose 1 random item from the "a" array, 2 random items from the "b" array, and 2 random items from the "c" array.
