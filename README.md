@@ -64,4 +64,4 @@ This example will choose 1 random item from the a section (index 0-4), 1 random 
 }
 ```
 
-    This example will choose 1 random item from the "a" array, 2 random items from the "b" array, and 2 random items from the "c" array.
+This example will choose 1 random item from the "a" array, 2 random items from the "b" array, and 2 random items from the "c" array.
