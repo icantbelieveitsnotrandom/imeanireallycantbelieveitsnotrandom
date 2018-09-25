@@ -55,6 +55,19 @@ const errorDemo4 = {
   },
 };
 
+const errorDemo5 = {
+  type: 'single',
+
+  array: ['a1', 'a2', 'a3', 'a4', 'a5', 'b1', 'b2', 'b3', 'b4', 'b5', 'c1', 'c2', 'c3', 'c4', 'c5'],
+
+  index: {
+    a: [0, 18],
+  },
+  results: {
+    a: 2,
+  },
+};
+
 const single = {
 type: 'single',
 
@@ -127,6 +140,10 @@ describe('weighted() randomizer function', () => {
 
   it('weighted() single returns undefined when the slice is not a positive integer', () => {
     expect(weighted(errorDemo2)).toBe(undefined);
+  });
+
+  it('weighted() single returns undefined when a nonexistant index is given', () => {
+    expect(weighted(errorDemo5)).toBe(undefined);
   });
 
   it('weighted() single returns a randomized array when correct input is given', () => {
