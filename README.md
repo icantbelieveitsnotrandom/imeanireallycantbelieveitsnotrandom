@@ -1,15 +1,19 @@
 
-# {Autumn's Randomizer}
+# weighted-randomizer
+
+## Demo
+
+Try it on Heroku! http://weighted-randomizer.herokuapp.com/
 
 ## Description
 
-{Autumn's Randomizer} is a customizable weight randomization function. It allows data input through array(s) and selects a specified number of random items to return a weighted result. It can take single or multiple arrays of items as inputs.
+weighted-randomizer is a customizable weight randomization function. It allows data input through array(s) and selects a specified number of random items to return a weighted result. It can take single or multiple arrays of items as inputs.
 
 The function also has an optional shuffler function to rearrange the order of items.
 
 ## How To Use
 
-Install the {Autumn's Randomizer} npm package and import the {randomize} function. Use the instructions below to choose the best option for your data and create the input object.
+Install the weighted-randomizer npm package and import the {randomize} function. Use the instructions below to choose the best option for your data and create the input object.
 
 ## How It Works
 
