@@ -38,7 +38,7 @@ function weighted(randomObj) {
     case 'single':
           for (let slice in index) {
               let range = ((index[slice][1] - index[slice][0]) +1)
-              if (range <1 || index[slice][1] > (array.length - 1)) {
+              if (range < 1 || index[slice][1] > array.length) {
                 return undefined;
               }
         for (let i = 0; i < results[slice]; i++) {
