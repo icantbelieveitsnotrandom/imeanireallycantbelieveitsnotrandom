@@ -3,10 +3,8 @@ function shuffler(arr) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-
   return arr
 }
-
 
 function weighted(randomObj) {
 
@@ -40,7 +38,7 @@ function weighted(randomObj) {
     case 'single':
           for (let slice in index) {
               let range = ((index[slice][1] - index[slice][0]) +1)
-              if (range <1 || index[slice][1] > (array.length - 1)) {
+              if (range < 1 || index[slice][1] > array.length) {
                 return undefined;
               }
         for (let i = 0; i < results[slice]; i++) {
@@ -67,5 +65,4 @@ function weighted(randomObj) {
   }
 
 }
-
 module.exports = weighted;

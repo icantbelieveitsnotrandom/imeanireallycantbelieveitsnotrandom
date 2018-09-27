@@ -1,23 +1,38 @@
 
 # weighted-randomizer
 
+
+## Table of Contents
+1. [ Demo ](#demo)
+1. [ Description ](#description)
+1. [ How to use ](#how-to-use)
+1. [ How it works ](#how-it-works)
+   - [ single array ](#single)
+   -  [ multi array ](#multi)
+
+<a name="demo"></a>
 ## Demo
 
 Try it on Heroku! http://weighted-randomizer.herokuapp.com/
 
+<a name="description"></a>
 ## Description
 
 weighted-randomizer is a customizable weight randomization function. It allows data input through array(s) and selects a specified number of random items to return a weighted result. It can take single or multiple arrays of items as inputs.
 
 The function also has an optional shuffler function to rearrange the order of items.
 
+<a name="how-to-use"></a>
 ## How To Use
 
 Install the weighted-randomizer npm package and import the {randomize} function. Use the instructions below to choose the best option for your data and create the input object.
 
+<a name="how-it-works"></a>
 ## How It Works
 
 The randomizer takes data in two forms - single array and multi-array.
+
+<a name="single"></a>
 
 1. Single Array
     This version takes a single array of items to be randomized, and chooses from them based on the index.
@@ -46,6 +61,8 @@ The randomizer takes data in two forms - single array and multi-array.
 ```
 
 This example will choose 1 random item from the a section (index 0-4), 1 random item from the b section (index 5-9) and 3 random items from the b-c sections (index 5-14). It will return the items in a shuffled order, as the shuffle option is set to true. 
+
+<a name="multi"></a>
 
 2. Multi-Array
     This version takes multiple input arrays of items and selects a specified number of random items from each array.
