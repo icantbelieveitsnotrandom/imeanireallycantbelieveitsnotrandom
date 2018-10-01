@@ -15,7 +15,7 @@
 
 Try it on Heroku! http://weighted-randomizer.herokuapp.com/
 
-<img src='https://github.com/icantbelieveitsnotrandom/imeanireallycantbelieveitsnotrandom/blob/master/src/assets/demo.png' style="width: 750px"/>
+<img src='https://raw.githubusercontent.com/icantbelieveitsnotrandom/imeanireallycantbelieveitsnotrandom/master/src/assets/demo.png' style="width: 750px"/>
 
 <a name="description"></a>
 ## Description
